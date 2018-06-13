@@ -12,4 +12,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  onLogin(user, pass) {
+    if (user && pass) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
 }
