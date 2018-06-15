@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(user, pass) {
-    if (user && pass) {
+    if (user !== "" && pass !== "" && user && pass) {
       return true;
     }
     else {
