@@ -31,4 +31,5 @@ describe('NivelacionComponent', () => {
     }
     expect(component.verificarPuntuacion(jugador)).toBeFalsy();
   });
+  // asd
 });
