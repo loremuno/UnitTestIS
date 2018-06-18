@@ -25,4 +25,16 @@ describe('CalculadoraComponent', () => {
     }
     expect(component.comprobarNivelJugador(jugador)).toBeFalsy();
   });
+  it('Un usuario puede tener acceso si su rol es tutor', () => {
+    const usuario = {
+      rol : "tutor"
+    }
+    expect(component.comprobarRolUsuario(usuario)).toBeTruthy();
+  });
+  it('Un jugador nivel avanzado puede ingresar a la calculadora', () => {
+    const jugador = {
+      nivel : "avanzado",
+    }
+    expect(component.comprobarNivelJugadorAvanzado(jugador)).toBeTruthy();
+  });
 });
