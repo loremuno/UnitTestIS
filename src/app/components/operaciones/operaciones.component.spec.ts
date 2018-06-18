@@ -18,7 +18,7 @@ describe('OperacionesComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+/*ASDASD */
   it('no se puede dividir por 0', () => {
     const a = 1;
     const b = 0;
