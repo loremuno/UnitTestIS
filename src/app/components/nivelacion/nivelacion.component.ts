@@ -11,21 +11,27 @@ export class NivelacionComponent implements OnInit {
 
   ngOnInit() {
   }
-  verificarPuntuacion(jugador){
-    if(jugador.puntos >= 0){
+  verificarPuntuacion(jugador) {
+    if (jugador.puntos >= 0) {
       return true;
-    }else{
+    } else {
       return false;
     }
   }
-  subirNivel(jugador){
-    if(jugador.puntos < 50 ){
-      jugador.nivel == "aprendiz";
-      return jugador.nivel;
-    }else if(jugador.puntos <100){
-      jugador.nivel == "medio";
-    }else{
-      jugador.nivel =="avanzado";
+  subirNivel(jugador) {
+    let nivelActual = jugador.nivel;
+    if (jugador.puntos <= 50) {
+      jugador.nivel = "aprendiz";
+    } else if (jugador.puntos <= 75 && jugador.puntos > 50) {
+      jugador.nivel = "medio";
+    } else if (jugador.puntos >= 90) {
+      jugador.nivel = "avanzado";
+    }
+    if (jugador.nivel != nivelActual) {
+      return true;
+    }
+    else {
+      return false;
     }
   }
 

@@ -21,7 +21,8 @@ describe('NivelacionComponent', () => {
 
   it('Subir nivel de jugador', () => {
     const jugador = {
-      puntos : 75
+      puntos : 75,
+      nivel : "aprendiz",
     }
     expect(component.subirNivel(jugador)).toBeTruthy();
   });
